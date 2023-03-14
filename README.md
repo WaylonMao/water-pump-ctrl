@@ -33,6 +33,16 @@ To build this project, you will need the following components:
 
 ![avatar](https://raw.githubusercontent.com/WaylonMao/water-pump-ctrl/main/pics/Sketch_bb.png)
 
+This wiring diagram draw by Fritzing. There is no 5-pin 4-digit module in Fritzing, so I used a LED module and wrote a note. This part can be replaced by any display module. Just need to change the code and the wiring.
+
+The Arduino I used is a Nano, which is more tiny and good for persistent installation and using.
+
+The water flow switch on my pump is actually a reed switch. There is a flap with a magnet that cocks up when the water flows. The greater the water flow, the closer the magnet is to the reed switch. There is a screw to adjust the strength of the spring, that is to say, its sensitivity can be adjusted. I used a 10K resistor to pull down the reed switch. When the water flows, the reed switch will be pulled up to 5V. When the water stops flowing, the reed switch will be pulled down to 0V. I know this pull-down method is not necessary, you may directly connect the reed switch to the digital pin of the Arduino. Since there is an internal pull-down resistor on the Arduino, it will be pulled down to 0V when the water stops flowing. But I think it's better to use an external pull-down resistor to avoid the internal pull-down resistor from being damaged.
+
+The optocoupler relay module is used to control the AC pump. When the Arduino sends a high signal, the relay module will switch on, until the Arduino sends a low signal, the relay module will switch off.
+
+There is also no water pressure sensor in Fritzing. I used a temperature sensor which is also a 3-pin linear sensor. The output voltage is proportional to the pressure. The greater the pressure, the greater the output voltage. The output voltage is 0.5V-4.5V. The pressure range is 0-1.2MPa.
+
 ### Software
 
 This project was developed using the Arduino IDE. You may download the source code from the GitHub repository. Don't forget to change the pin numbers in the code to match your wiring.
