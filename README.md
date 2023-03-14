@@ -24,7 +24,7 @@ To build this project, you will need the following components:
 
 - Arduino board (Uno or Nano)
 - Water pressure sensor (Main is 5V for 1.2MPa)
-- Relay module （Since controling AC pump directly）
+- Relay module (Since controling AC pump directly)
 - Four-digit display module (74HC595. You can use other modules)
 - Jumper wires
 - 5V power supply(I used a USB adapter)
